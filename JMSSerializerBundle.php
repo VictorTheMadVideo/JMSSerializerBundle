@@ -56,6 +56,7 @@ class JMSSerializerBundle extends Bundle
 
     public function build(ContainerBuilder $builder)
     {
-        $builder->addCompilerPass(new SetVisitorsPass());
+	$setVisitorPass = new SetVisitorsPass();
+        $builder->addCompilerPass($setVisitorPass);
     }
 }
